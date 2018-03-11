@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Motor No.</th>
+                <th scope="col">Motor Health</th>
+                <th scope="col">Fix Issues</th>
+            </tr>
+        </thead>
+        <tbody id="healthTableBody">
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-info float-right">Motors</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="./javascripts/health.js"></script>
+{% endblock %}
