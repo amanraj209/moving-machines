@@ -14,7 +14,7 @@ Nunjucks is a rich and powerful templating engine for JavaScript developed by Mo
 
 ## Folder Structure
 ```
-url-shortner/
+moving-machines/
     bin/
         www
     public/
