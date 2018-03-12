@@ -167,6 +167,9 @@ $(document).ready(function () {
                     url: 'decmotor',
                     data: {mno: id, speed: speed},
                     success: function (result) {
+                        if (result.speed <= 0) {
+                            result.speed = 0;
+                        }
                         $(`#speed${id}`).text(result.speed);
                         speeds[result.mno - 1] = result.speed;
                         if (result.speed === 0) {
