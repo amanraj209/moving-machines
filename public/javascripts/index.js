@@ -22,19 +22,19 @@ $(document).ready(function () {
     });
 
     setInterval(function () {
-        $.ajax({
-            type: 'POST',
-            url: 'updatecapturespeeds',
-            data: {speeds: speeds},
-            success: function (result) {
-                console.log(result.status);
-            },
-            error: function (error) {
-                if (error.status === 500) {
-                    alert("Some internal error occurred. Try again.");
-                }
-            }
-        });
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: 'updatecapturespeeds',
+    //         data: {speeds: speeds},
+    //         success: function (result) {
+    //             console.log(result.status);
+    //         },
+    //         error: function (error) {
+    //             if (error.status === 500) {
+    //                 alert("Some internal error occurred. Try again.");
+    //             }
+    //         }
+    //     });
         $.ajax({
             type: 'POST',
             url: 'motorupdates',

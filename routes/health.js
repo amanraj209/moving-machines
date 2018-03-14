@@ -15,6 +15,18 @@ module.exports = function (db, total, totalDoc, motors, healthCheck) {
     });
 
     router.post('/motorupdates', function (req, res, next) {
+        // let flag = false;
+        // while (!flag) {
+        //     const changes = db.serializeChanges(['motors']);
+        //     if (changes.length > 0) {
+        //         const result = JSON.parse(changes);
+        //         motors.flushChanges();
+        //         flag = true;
+        //     }
+        //     if (flag) {
+        //         res.send({data: result});
+        //     }
+        // }
         const changes = db.serializeChanges(['motors']);
         if (changes.length > 0) {
             const result = JSON.parse(changes);
